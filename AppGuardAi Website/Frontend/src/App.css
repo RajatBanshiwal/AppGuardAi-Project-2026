@@ -1,0 +1,20 @@
+/* Scrollbar hide (Cross-browser) */
+html, body {
+  overflow-x: hidden;         /* prevent horizontal scroll */
+  overflow-y: auto;           /* allow vertical scroll */
+  scrollbar-width: none;      /* Firefox hide scrollbar */
+  -ms-overflow-style: none;   /* IE/Edge hide scrollbar */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;              /* Chrome/Safari/Edge */
+}
+
+/* Root container width control */
+#root {
+  max-width: 1560px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;          /* prevent root overflow */
+}

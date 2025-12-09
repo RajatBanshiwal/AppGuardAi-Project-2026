@@ -1,0 +1,24 @@
+/* Scrollbar hide (Cross-browser) - Hide on mobile, show on desktop */
+html, body {
+  overflow-x: hidden;         /* prevent horizontal scroll */
+}
+
+@media (max-width: 767px) {
+  html, body {
+    scrollbar-width: none;      /* Firefox hide scrollbar on mobile */
+    -ms-overflow-style: none;   /* IE/Edge hide scrollbar on mobile */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;              /* Chrome/Safari/Edge hide on mobile */
+  }
+}
+
+/* Root container width control */
+#root {
+  max-width: 1560px;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;          /* prevent root overflow */
+}
